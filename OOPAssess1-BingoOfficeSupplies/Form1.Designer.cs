@@ -44,6 +44,7 @@
             this.lBox_ProductsDisplay.Name = "lBox_ProductsDisplay";
             this.lBox_ProductsDisplay.Size = new System.Drawing.Size(182, 84);
             this.lBox_ProductsDisplay.TabIndex = 0;
+            this.lBox_ProductsDisplay.SelectedIndexChanged += new System.EventHandler(this.lBox_ProductsDisplay_SelectedIndexChanged);
             // 
             // label1
             // 

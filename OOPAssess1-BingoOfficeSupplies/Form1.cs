@@ -27,12 +27,11 @@ namespace OOPAssess1_BingoOfficeSupplies
         private void Form1_Load(object sender, EventArgs e)
         {
             MessageBox.Show("msg1");
-            buildarray();
-
-            MessageBox.Show("msg2");
+            buildArray();
+            
         }
 
-        public void buildarray()
+        public void buildArray()
         {
         //making a string to read in each line
             string nextLine;
@@ -78,6 +77,13 @@ namespace OOPAssess1_BingoOfficeSupplies
 
             lBox_ProductsDisplay.DataSource = prodNameArray;
 
+        }
+
+        private void lBox_ProductsDisplay_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int selectedItem = lBox_ProductsDisplay.SelectedIndex;
+
+            lbl_SalePrice.Text = prodPriceArray[selectedItem].ToString();
         }
     }
 }
