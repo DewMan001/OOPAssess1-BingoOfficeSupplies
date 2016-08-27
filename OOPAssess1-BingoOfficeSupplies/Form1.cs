@@ -26,14 +26,39 @@ namespace OOPAssess1_BingoOfficeSupplies
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("msg1");
-            buildArray();
-            
+            buildArray();           
+        }
+
+        
+
+        private void lBox_ProductsDisplay_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int selectedItem = lBox_ProductsDisplay.SelectedIndex;
+
+            double salePrice = calcSalePrice(prodPriceArray[selectedItem]);
+
+            lbl_SalePrice.Text = salePrice.ToString();
+
+        }
+
+        private double calcSalePrice(double originalPrice)
+        {
+            //setting up a variable to store the mark up
+            double markUp;
+            //calculating the markup
+            markUp = originalPrice * 0.60;
+
+            //creating a variable to keep in the sale price
+            double salePrice;
+            //calculating the sale price
+            salePrice = originalPrice + markUp;
+            //sending back the sale price
+            return salePrice;
         }
 
         public void buildArray()
         {
-        //making a string to read in each line
+            //making a string to read in each line
             string nextLine;
 
             //and a string for the file path
@@ -77,13 +102,6 @@ namespace OOPAssess1_BingoOfficeSupplies
 
             lBox_ProductsDisplay.DataSource = prodNameArray;
 
-        }
-
-        private void lBox_ProductsDisplay_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            int selectedItem = lBox_ProductsDisplay.SelectedIndex;
-
-            lbl_SalePrice.Text = prodPriceArray[selectedItem].ToString();
         }
     }
 }
