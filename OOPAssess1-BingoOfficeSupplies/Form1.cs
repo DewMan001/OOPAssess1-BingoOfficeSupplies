@@ -26,14 +26,21 @@ namespace OOPAssess1_BingoOfficeSupplies
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
-            //making a string to read in each line
+            MessageBox.Show("msg1");
+            buildarray();
+
+            MessageBox.Show("msg2");
+        }
+
+        public void buildarray()
+        {
+        //making a string to read in each line
             string nextLine;
 
             //and a string for the file path
             string filePath;
             filePath = "C:/Users/James/OneDrive/Certificate IV in Programming/Semester 2/Assessments/Products.txt";
-
+            MessageBox.Show("msg10");
             //and a streamreader to pipe in the data
             StreamReader pipeIn;
 
@@ -48,7 +55,7 @@ namespace OOPAssess1_BingoOfficeSupplies
 
                 //reading in the next line
                 nextLine = pipeIn.ReadLine();
-
+                int count = 0;
                 //as long as the next line in the text file isn't empty...
                 while (nextLine != null)
                 {
@@ -57,25 +64,20 @@ namespace OOPAssess1_BingoOfficeSupplies
                     //break up the next line by the commas
                     lineArray = nextLine.Split(',');
 
-
-                    for (int count = 0; count < 20; count++)
-                    {
-                        //order of the fields: product code, product name, amount of stock, individual sale price, image name
-                        prodNumArray[count] = lineArray[0];
-                        prodNameArray[count] = lineArray[1];
-                        prodStockArray[count] = Int32.Parse(lineArray[2]);
-                        prodPriceArray[count] = double.Parse(lineArray[3]);
-                        prodPicArray[count] = lineArray[4];
-                    }
+                    //order of the fields: product code, product name, amount of stock, individual sale price, image name
+                    prodNumArray[count] = lineArray[0];
+                    prodNameArray[count] = lineArray[1];
+                    prodStockArray[count] = Int32.Parse(lineArray[2]);
+                    prodPriceArray[count] = double.Parse(lineArray[3]);
+                    prodPicArray[count] = lineArray[4];
+                    nextLine = pipeIn.ReadLine();
+                    count++;
                 }
 
-                
             }
 
-            //for (int count = 0; count < prodNameArray.Length; count++)
-            //{
-            //    lBox_ProductsDisplay.Items.Add(prodNameArray[count]);
-            //}
+            lBox_ProductsDisplay.DataSource = prodNameArray;
+
         }
     }
 }

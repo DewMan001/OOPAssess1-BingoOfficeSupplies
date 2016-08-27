@@ -14,15 +14,18 @@ namespace OOPAssess1_BingoOfficeSupplies
         int userAmtPurchased;
         int userSaleValue;
 
-        SalesInvoice()
+        public SalesInvoice(int invoiceNumber, string productNumber, int salePrice, int amtPurchased, int saleValue)
         {
-            InvoiceNumber = 0;
-            ProductNumber = "No product number set";
-            SalePrice = 0;
-            AmtPurchased = 0;
-            SaleValue = 0;
+            userInvoiceNumber = invoiceNumber;
+            userProductNumber = productNumber;
+            userSalePrice = salePrice;
+            userAmtPurchased = amtPurchased;
+            userSaleValue = saleValue;
         }
 
+        public SalesInvoice()
+        { }
+        
         public int InvoiceNumber
         {
             set { userInvoiceNumber = value; }
