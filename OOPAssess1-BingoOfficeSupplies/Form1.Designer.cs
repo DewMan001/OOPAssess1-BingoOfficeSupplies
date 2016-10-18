@@ -34,6 +34,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lbl_SalePrice = new System.Windows.Forms.Label();
             this.oFileDLG_GetFile = new System.Windows.Forms.OpenFileDialog();
+            this.btn_Sale = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.imgBox_Display)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,7 +59,7 @@
             // 
             // imgBox_Display
             // 
-            this.imgBox_Display.Location = new System.Drawing.Point(356, 98);
+            this.imgBox_Display.Location = new System.Drawing.Point(356, 34);
             this.imgBox_Display.Name = "imgBox_Display";
             this.imgBox_Display.Size = new System.Drawing.Size(280, 195);
             this.imgBox_Display.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -68,7 +69,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(352, 296);
+            this.label2.Location = new System.Drawing.Point(352, 232);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(48, 20);
             this.label2.TabIndex = 3;
@@ -77,7 +78,7 @@
             // lbl_SalePrice
             // 
             this.lbl_SalePrice.AutoSize = true;
-            this.lbl_SalePrice.Location = new System.Drawing.Point(444, 296);
+            this.lbl_SalePrice.Location = new System.Drawing.Point(444, 232);
             this.lbl_SalePrice.Name = "lbl_SalePrice";
             this.lbl_SalePrice.Size = new System.Drawing.Size(139, 20);
             this.lbl_SalePrice.TabIndex = 4;
@@ -87,11 +88,21 @@
             // 
             this.oFileDLG_GetFile.FileName = "openFileDialog1";
             // 
+            // btn_Sale
+            // 
+            this.btn_Sale.Location = new System.Drawing.Point(356, 266);
+            this.btn_Sale.Name = "btn_Sale";
+            this.btn_Sale.Size = new System.Drawing.Size(280, 35);
+            this.btn_Sale.TabIndex = 5;
+            this.btn_Sale.Text = "Sell Product";
+            this.btn_Sale.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(648, 371);
+            this.Controls.Add(this.btn_Sale);
             this.Controls.Add(this.lbl_SalePrice);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.imgBox_Display);
@@ -114,6 +125,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lbl_SalePrice;
         private System.Windows.Forms.OpenFileDialog oFileDLG_GetFile;
+        private System.Windows.Forms.Button btn_Sale;
     }
 }
 
