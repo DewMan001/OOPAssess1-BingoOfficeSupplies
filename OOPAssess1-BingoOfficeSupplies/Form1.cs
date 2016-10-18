@@ -26,9 +26,12 @@ namespace OOPAssess1_BingoOfficeSupplies
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            buildArray();           
+            //string for the path of products.txt
+            string productsPath = "../../Resources/Products.txt";
+            buildArray(productsPath);           
         }
 
+        
         
 
         private void lBox_ProductsDisplay_SelectedIndexChanged(object sender, EventArgs e)
@@ -38,6 +41,11 @@ namespace OOPAssess1_BingoOfficeSupplies
             double salePrice = calcSalePrice(prodPriceArray[selectedItem]);
 
             lbl_SalePrice.Text = salePrice.ToString();
+
+            //file path for the image
+            string imgPath = "../../Resources/" + prodPicArray[selectedItem];
+
+            imgBox_Display.Image = Image.FromFile(imgPath);
 
         }
 
@@ -56,15 +64,16 @@ namespace OOPAssess1_BingoOfficeSupplies
             return salePrice;
         }
 
-        public void buildArray()
+        public void buildArray(string pathOfFile)
         {
             //making a string to read in each line
             string nextLine;
 
             //and a string for the file path
             string filePath;
-            filePath = "C:/Users/James/OneDrive/Certificate IV in Programming/Semester 2/Assessments/Products.txt";
-            MessageBox.Show("msg10");
+            filePath = pathOfFile;
+            MessageBox.Show(filePath);
+
             //and a streamreader to pipe in the data
             StreamReader pipeIn;
 
@@ -96,11 +105,11 @@ namespace OOPAssess1_BingoOfficeSupplies
                     prodPicArray[count] = lineArray[4];
                     nextLine = pipeIn.ReadLine();
                     count++;
+
+                    lBox_ProductsDisplay.Items.Add(lineArray[1]);
                 }
-
+                
             }
-
-            lBox_ProductsDisplay.DataSource = prodNameArray;
 
         }
     }

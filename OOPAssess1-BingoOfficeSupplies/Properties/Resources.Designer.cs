@@ -22,7 +22,7 @@ namespace OOPAssess1_BingoOfficeSupplies.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    public class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace OOPAssess1_BingoOfficeSupplies.Properties {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("OOPAssess1_BingoOfficeSupplies.Properties.Resources", typeof(Resources).Assembly);
@@ -51,62 +51,12 @@ namespace OOPAssess1_BingoOfficeSupplies.Properties {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
             set {
                 resourceCulture = value;
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap calculator {
-            get {
-                object obj = ResourceManager.GetObject("calculator", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap eraser {
-            get {
-                object obj = ResourceManager.GetObject("eraser", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap hole_punch {
-            get {
-                object obj = ResourceManager.GetObject("hole_punch", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap paperclip {
-            get {
-                object obj = ResourceManager.GetObject("paperclip", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap pen {
-            get {
-                object obj = ResourceManager.GetObject("pen", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -122,49 +72,27 @@ namespace OOPAssess1_BingoOfficeSupplies.Properties {
         ///CX011,CD box of 10,112,3.95,cd.jpg
         ///CZ081,pencil,208,0.40,pencil.jpg                                                                                                                                              [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static string Products {
+        public static string Products {
             get {
                 return ResourceManager.GetString("Products", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        ///   Looks up a localized string similar to AX012,calculator,104,5.95,calculator.jpg
+        ///AZ052,thumb drive 10gb,20,7.20,ThumbDrive.jpg
+        ///BA074,hole punch,40,4.95,HolePunch.jpg
+        ///BH022,ruler,95,0.55,ruler.jpg
+        ///BT004,Eraser,66,0.99,Eraser.jpg
+        ///BZ066,Pen,52,3.95,pen.jpg
+        ///CA014,Stapler,12,4.95,stapler.jpg
+        ///CB003,Box of paper clips,44,2.50,paperclip.jpg
+        ///CX011,CD box of 10,112,3.95,cd.jpg
+        ///CZ081,pencil,208,0.40,pencil.jpg                                                                                                                                              [rest of string was truncated]&quot;;.
         /// </summary>
-        internal static System.Drawing.Bitmap ruler {
+        public static string Products1 {
             get {
-                object obj = ResourceManager.GetObject("ruler", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap stapler {
-            get {
-                object obj = ResourceManager.GetObject("stapler", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap thumb_drive {
-            get {
-                object obj = ResourceManager.GetObject("thumb_drive", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap thumb_drive2 {
-            get {
-                object obj = ResourceManager.GetObject("thumb_drive2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ResourceManager.GetString("Products1", resourceCulture);
             }
         }
     }

@@ -59,7 +59,7 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -77,40 +77,28 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="Resources\Assignment1 UML C#Project%281%29.docx" />
+    <EmbeddedResource Include="Resources\Assignment1 UML C#Project%281%29.docx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\150331_storage_USB_desktop.jpg" />
+    <EmbeddedResource Include="Resources\calculator.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\3201474-2318534780-ruler.jpg" />
+    <EmbeddedResource Include="Resources\cute_thumb_bear_usb_flash_drive_4.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\calculator.jpg" />
+    <EmbeddedResource Include="Resources\paperclip.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\cute_thumb_bear_usb_flash_drive_4.jpg" />
+    <EmbeddedResource Include="Resources\pen.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\eraser.jpg" />
+    <EmbeddedResource Include="Resources\Products.txt" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\master-40-sheet-heavy-duty-3-hole-punch-black_1366584.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\paperclip.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\pen.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Products.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\stapler.jpg" />
+    <EmbeddedResource Include="Resources\stapler.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
