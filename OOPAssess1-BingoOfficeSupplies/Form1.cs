@@ -127,7 +127,7 @@ namespace OOPAssess1_BingoOfficeSupplies
             //using that index to pick out which stock to edit
             int prodStock = prodStockArray[selectedItem];
 
-            //
+            
         }
     }
 }
