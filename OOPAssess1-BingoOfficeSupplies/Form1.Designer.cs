@@ -96,6 +96,7 @@
             this.btn_Sale.TabIndex = 5;
             this.btn_Sale.Text = "Sell Product";
             this.btn_Sale.UseVisualStyleBackColor = true;
+            this.btn_Sale.Click += new System.EventHandler(this.btn_Sale_Click);
             // 
             // Form1
             // 

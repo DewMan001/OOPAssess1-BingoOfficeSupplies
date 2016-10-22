@@ -24,6 +24,9 @@ namespace OOPAssess1_BingoOfficeSupplies
         double[] prodPriceArray = new double[20];
         string[] prodPicArray = new string[20];
 
+        //an integer for the invoice number
+        int invoiceNum = 000000;
+
         private void Form1_Load(object sender, EventArgs e)
         {
             //string for the path of products.txt
@@ -111,6 +114,20 @@ namespace OOPAssess1_BingoOfficeSupplies
                 
             }
 
+        }
+
+        private void btn_Sale_Click(object sender, EventArgs e)
+        {
+            //incrementing the invoice number by one
+            int newInvoiceNumber = invoiceNum + 1;
+
+            //pulling in the currently selected item
+            int selectedItem = lBox_ProductsDisplay.SelectedIndex;
+
+            //using that index to pick out which stock to edit
+            int prodStock = prodStockArray[selectedItem];
+
+            //
         }
     }
 }
