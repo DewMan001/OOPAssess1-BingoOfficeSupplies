@@ -16,8 +16,13 @@ namespace OOPAssess1_BingoOfficeSupplies
         public Form1()
         {
             InitializeComponent();
+
+            //string for the path of products.txt
+            string productsPath = "../../Resources/Products.txt";
+            buildArray(productsPath);
         }
 
+        //the various arrays for the product attributes
         string[] prodNumArray = new string[20];
         string[] prodNameArray = new string[20];
         int[] prodStockArray = new int[20];
@@ -29,9 +34,7 @@ namespace OOPAssess1_BingoOfficeSupplies
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //string for the path of products.txt
-            string productsPath = "../../Resources/Products.txt";
-            buildArray(productsPath);           
+            lBox_ProductsDisplay.SelectedIndex = 0;
         }
 
         
@@ -63,6 +66,8 @@ namespace OOPAssess1_BingoOfficeSupplies
             double salePrice;
             //calculating the sale price
             salePrice = originalPrice + markUp;
+            
+            
             //sending back the sale price
             return salePrice;
         }
@@ -127,7 +132,28 @@ namespace OOPAssess1_BingoOfficeSupplies
             //using that index to pick out which stock to edit
             int prodStock = prodStockArray[selectedItem];
 
+            //picking up the stock the customer wants
+            int stockDesired = Int32.Parse(Microsoft.VisualBasic.Interaction.InputBox("How much stock is desired?", "Stock desired", "1", 0, 0));
+
+
+            //comparing the stockDesired to the stockRemaining
+            bool enoughStock = stockCompare(stockDesired, prodStock);
+
+            double fullPrice;
+
+        }
+
+        private bool stockCompare(int stockDesired, int stockRemaining)
+        {
+            return true;
+        }
+
+        private void txt_AmountOrdered_TextChanged(object sender, EventArgs e)
+        {
             
         }
+
+        
+
     }
 }

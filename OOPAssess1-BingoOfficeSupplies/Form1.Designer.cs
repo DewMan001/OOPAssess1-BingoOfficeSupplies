@@ -106,6 +106,8 @@
             this.txt_AmountOrdered.Name = "txt_AmountOrdered";
             this.txt_AmountOrdered.Size = new System.Drawing.Size(150, 26);
             this.txt_AmountOrdered.TabIndex = 6;
+            this.txt_AmountOrdered.Text = "1";
+            this.txt_AmountOrdered.TextChanged += new System.EventHandler(this.txt_AmountOrdered_TextChanged);
             // 
             // label3
             // 
