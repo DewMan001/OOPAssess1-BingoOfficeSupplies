@@ -133,20 +133,28 @@ namespace OOPAssess1_BingoOfficeSupplies
             int prodStock = prodStockArray[selectedItem];
 
             //picking up the stock the customer wants
-            int stockDesired = Int32.Parse(Microsoft.VisualBasic.Interaction.InputBox("How much stock is desired?", "Stock desired", "1", 0, 0));
+            int stockDesired = Int32.Parse(Microsoft.VisualBasic.Interaction.InputBox("How much stock is desired?" + newInvoiceNumber, "Stock desired", "1", 0, 0));
 
 
             //comparing the stockDesired to the stockRemaining
-            bool enoughStock = stockCompare(stockDesired, prodStock);
+            if(stockDesired <= prodStock)
+            {
+                MessageBox.Show("There is enough stock");
+
+                //editing the prodStock in the array
+                prodStockArray[selectedItem] = prodStock - stockDesired;
+
+                MessageBox.Show("There are " + prodStockArray[selectedItem] + " of this product left");
+            }
+            else if (stockDesired > prodStock)
+            {
+                MessageBox.Show("There is not enough stock. \n \n You tried to order " + stockDesired + ", but unfortunately we only have " + prodStock + ".");
+            }
 
             double fullPrice;
 
         }
 
-        private bool stockCompare(int stockDesired, int stockRemaining)
-        {
-            return true;
-        }
 
         private void txt_AmountOrdered_TextChanged(object sender, EventArgs e)
         {
